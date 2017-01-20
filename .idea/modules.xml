@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/01优酷菜单/01优酷菜单.iml" filepath="$PROJECT_DIR$/01优酷菜单/01优酷菜单.iml" />
+      <module fileurl="file://$PROJECT_DIR$/02.事件分发/02.事件分发.iml" filepath="$PROJECT_DIR$/02.事件分发/02.事件分发.iml" />
+      <module fileurl="file://$PROJECT_DIR$/03.contentprovider/03.contentprovider.iml" filepath="$PROJECT_DIR$/03.contentprovider/03.contentprovider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/03.contentresolver/03.contentresolver.iml" filepath="$PROJECT_DIR$/03.contentresolver/03.contentresolver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo/demo.iml" filepath="$PROJECT_DIR$/demo/demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sgg.iml" filepath="$PROJECT_DIR$/sgg.iml" />
+    </modules>
+  </component>
+</project>

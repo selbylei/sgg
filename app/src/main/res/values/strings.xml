@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">sgg</string>
+    <string name="activity.start_imageActivity">Start ImageActivity</string>
+</resources>
