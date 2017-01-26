@@ -11,6 +11,12 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Toast;
 
+import com.selbylei.demo.Demo1.Demo1Activity;
+import com.selbylei.demo.Demo2.Demo2Activity;
+import com.selbylei.demo.Demo3.Demo3Activity;
+import com.selbylei.demo.Demo4.Demo4Activity;
+import com.selbylei.demo.Demo5.Demo5Activity;
+import com.selbylei.demo.Demo6.Demo6Activity;
 import com.selbylei.demo.adapter.MyAdapter;
 
 import java.util.ArrayList;
@@ -72,6 +78,11 @@ public class MainActivity extends AppCompatActivity {
                     Intent intent = new Intent(MainActivity.this, Demo5Activity.class);
                     startActivity(intent);
                 }
+
+                if (str.equals(Constant.DEMO6)) {
+                    Intent intent = new Intent(MainActivity.this, Demo6Activity.class);
+                    startActivity(intent);
+                }
             }
         });
         adapter.setmOnTemLongClickListener(new MyAdapter.OnRecyclerViewItemLongClickListener() {
@@ -97,6 +108,10 @@ public class MainActivity extends AppCompatActivity {
                     Intent intent = new Intent(MainActivity.this, Demo5Activity.class);
                     startActivity(intent);
                 }
+                if (str.equals(Constant.DEMO6)){
+                    Intent intent = new Intent(MainActivity.this, Demo6Activity.class);
+                    startActivity(intent);
+                }
             }
         });
         rv.setAdapter(adapter);
@@ -109,6 +124,7 @@ public class MainActivity extends AppCompatActivity {
         mDataList.add(Constant.DEMO3);
         mDataList.add(Constant.DEMO4);
         mDataList.add(Constant.DEMO5);
+        mDataList.add(Constant.DEMO6);
     }
 
 

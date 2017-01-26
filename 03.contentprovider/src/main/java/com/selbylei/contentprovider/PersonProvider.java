@@ -7,6 +7,7 @@ import android.content.UriMatcher;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.util.Log;
 
@@ -47,7 +48,7 @@ public class PersonProvider extends ContentProvider {
 
     @Nullable
     @Override
-    public Cursor query(Uri uri, String[] projection, String selection, String[] selectionArgs, String sortOrder) {
+    public Cursor query(@NonNull Uri uri, String[] projection, String selection, String[] selectionArgs, String sortOrder) {
         Log.i(TAG, "query()");
 
         //得到连接对象
@@ -82,20 +83,63 @@ public class PersonProvider extends ContentProvider {
 
     @Nullable
     @Override
-    public Uri insert(Uri uri, ContentValues values) {
+    public Uri insert(@NonNull Uri uri, ContentValues values) {
         Log.i(TAG, "insert()");
-        return null;
+        //得到连接对象
+        SQLiteDatabase database = dbHelper.getReadableDatabase();
+        //匹配uri
+        int code = matcher.match(uri);
+        //合法进行插入
+        if (code == 1) {
+            long id = database.insert("person", null, values);
+            //将id添加到uri中
+            uri = ContentUris.withAppendedId(uri, id);
+            //关闭数据库连接
+            database.close();
+            return uri;
+        } else {
+            database.close();
+            throw new RuntimeException("uri不合法");
+        }
     }
 
     @Override
-    public int delete(Uri uri, String selection, String[] selectionArgs) {
+    public int delete(@NonNull Uri uri, String selection, String[] selectionArgs) {
         Log.i(TAG, "delete()");
-        return 0;
+        //得到连接对象
+        SQLiteDatabase database = dbHelper.getReadableDatabase();
+        //匹配uri
+        int code = matcher.match(uri);
+        int deleteCount = 0;
+        if (code == 1) {
+            deleteCount = database.delete("person", selection, selectionArgs);
+        } else if (code == 2) {
+            long id = ContentUris.parseId(uri);
+            database.delete("person", "_id=" + id, null);
+        } else {
+            throw new RuntimeException("uri不合法");
+        }
+        database.close();
+        return deleteCount;
     }
 
     @Override
-    public int update(Uri uri, ContentValues values, String selection, String[] selectionArgs) {
+    public int update(@NonNull Uri uri, ContentValues values, String selection, String[] selectionArgs) {
         Log.i(TAG, "update()");
-        return 0;
+        //得到连接对象
+        SQLiteDatabase database = dbHelper.getReadableDatabase();
+        //匹配uri
+        int code = matcher.match(uri);
+        int updateCount=0;
+        if (code==1){
+           updateCount =  database.update("person",values,selection,selectionArgs);
+        }else if (code==2){
+            long id = ContentUris.parseId(uri);
+            updateCount = database.update("person",values,"_id="+id, null);
+        }else {
+            throw new RuntimeException("uri不合法");
+        }
+        database.close();
+        return updateCount;
     }
 }

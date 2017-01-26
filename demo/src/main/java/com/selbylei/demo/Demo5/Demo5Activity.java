@@ -1,11 +1,12 @@
-package com.selbylei.demo;
+package com.selbylei.demo.Demo5;
 
 
 import android.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.selbylei.demo.fragment.MyFragment;
+import com.selbylei.demo.R;
+import com.selbylei.demo.Demo5.fragment.MyFragment;
 
 public class Demo5Activity extends AppCompatActivity {
 

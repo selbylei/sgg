@@ -4,12 +4,28 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.selbylei.contentresolver.MainActivity">
+    tools:context="com.selbylei.contentresolver.MainActivity"
+    android:orientation="vertical">
 
     <Button
-        android:id="@+id/btn_query"
+        android:id="@+id/btn_query_by_id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="query"
-        android:text="数据查询" />
+        android:onClick="queryById"
+        android:text="根据id查询" />
+
+    <Button
+        android:id="@+id/btn_query_none_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="queryNoneId"
+        android:text="无ID查询" />
+
+    <Button
+        android:id="@+id/btn_insert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="insert"
+        android:text="插入数据" />
+
 </LinearLayout>

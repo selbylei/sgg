@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">sgg</string>
     <string name="activity.start_imageActivity">Start ImageActivity</string>
+
+    <string name="title_activity_butter_knife">ButterKnifeActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>

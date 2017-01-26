@@ -4,6 +4,6 @@
     android:id="@+id/activity_demo5_content"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.selbylei.demo.Demo5Activity">
+    tools:context="com.selbylei.demo.Demo5.Demo5Activity">
 
 </FrameLayout>

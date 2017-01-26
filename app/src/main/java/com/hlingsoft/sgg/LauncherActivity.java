@@ -1,5 +1,6 @@
 package com.hlingsoft.sgg;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
@@ -7,7 +8,7 @@ import android.os.Bundle;
 
 
 
-public class LauncherActivity extends AppCompatActivity {
+public class LauncherActivity extends Activity {
 
     public static final String TAG = LauncherActivity.class.getSimpleName();
 
@@ -17,8 +18,6 @@ public class LauncherActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_laucher);
-
-
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {

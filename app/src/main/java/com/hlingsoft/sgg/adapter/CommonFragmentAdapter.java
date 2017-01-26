@@ -49,9 +49,8 @@ public class CommonFragmentAdapter extends BaseAdapter {
         if (convertView == null) {
             convertView = View.inflate(mContext, R.layout.common_fragment_adpater, null);
         }
-        TextView name = ViewHolder.get(convertView,tv_name);
+        TextView name = ViewHolder.get(convertView,R.id.tv_name);
         name.setText(mDatas[position]);
-        name.setTextColor(Color.RED);
         name.setPadding(20,20,0,10);
         name.setTextSize(20);
         return convertView;

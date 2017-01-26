@@ -1,9 +1,11 @@
-package com.selbylei.demo;
+package com.selbylei.demo.Demo2;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
+
+import com.selbylei.demo.R;
 
 public class Demo2Activity extends AppCompatActivity {
 

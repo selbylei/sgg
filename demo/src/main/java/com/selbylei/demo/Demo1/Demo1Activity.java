@@ -1,4 +1,4 @@
-package com.selbylei.demo;
+package com.selbylei.demo.Demo1;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +9,8 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+
+import com.selbylei.demo.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

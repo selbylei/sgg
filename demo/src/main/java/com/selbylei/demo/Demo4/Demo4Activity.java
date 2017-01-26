@@ -1,4 +1,4 @@
-package com.selbylei.demo;
+package com.selbylei.demo.Demo4;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -9,7 +9,8 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import com.selbylei.demo.view.CustomView;
+import com.selbylei.demo.R;
+import com.selbylei.demo.Demo4.view.CustomView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

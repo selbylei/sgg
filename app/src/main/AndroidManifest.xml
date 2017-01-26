@@ -10,14 +10,24 @@
         android:theme="@style/AppTheme">
         <activity android:name=".LauncherActivity">
             <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-            <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         // configChanges的配置可以解决横竖屏切换导致fragment重新加载
         <activity
             android:name=".MainActivity"
             android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name=".okhttp.OkHttpActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:name=".xUtils3.xUtils3Activity" />
+        <activity
+            android:name=".ButterKnife.ButterKnifeActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_butter_knife"
+            android:theme="@style/FullscreenTheme"></activity>
     </application>
 
 </manifest>

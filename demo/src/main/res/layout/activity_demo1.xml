@@ -4,7 +4,7 @@
     android:id="@+id/activity_demo1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.selbylei.demo.Demo1Activity">
+    tools:context="com.selbylei.demo.Demo1.Demo1Activity">
 
     <ImageView
         android:id="@+id/iv"
