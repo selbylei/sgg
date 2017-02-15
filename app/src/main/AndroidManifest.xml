@@ -24,10 +24,11 @@
             android:configChanges="keyboardHidden|orientation|screenSize" />
         <activity android:name=".xUtils3.xUtils3Activity" />
         <activity
-            android:name=".ButterKnife.ButterKnifeActivity"
+            android:name=".butterknife.ButterKnifeActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_butter_knife"
-            android:theme="@style/FullscreenTheme"></activity>
+            android:theme="@style/FullscreenTheme" />
+        <activity android:name=".tablaylout.TabLayoutActivity"></activity>
     </application>
 
 </manifest>

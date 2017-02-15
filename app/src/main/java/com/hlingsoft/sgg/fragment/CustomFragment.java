@@ -30,7 +30,6 @@ public class CustomFragment extends BaseFragment {
     @Override
     protected void initData() {
         super.initData();
-        Log.e(TAG, "常用框架Fragment数据初始化了.." );
         textView.setText("自定义控件");
     }
 }

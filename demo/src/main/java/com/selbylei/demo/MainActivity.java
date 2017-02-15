@@ -18,6 +18,7 @@ import com.selbylei.demo.Demo4.Demo4Activity;
 import com.selbylei.demo.Demo5.Demo5Activity;
 import com.selbylei.demo.Demo6.Demo6Activity;
 import com.selbylei.demo.adapter.MyAdapter;
+import com.selbylei.demo.demo_youku_menu.YoukuMenuActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
     private LinearLayoutManager mLayoutManager;
     private List<String> mDataList;
-    private long lastPressBackTime = 0;
+//    private long lastPressBackTime = 0;
     private boolean exit = false; //标识是否退出
 
 
@@ -60,60 +61,28 @@ public class MainActivity extends AppCompatActivity {
                 if (str.equals(Constant.DEMO1)) {
                     Intent intent = new Intent(MainActivity.this, Demo1Activity.class);
                     startActivity(intent);
-                }
-                if (str.equals(Constant.DEMO2)) {
+                } else if (str.equals(Constant.DEMO2)) {
                     Intent intent = new Intent(MainActivity.this, Demo2Activity.class);
                     startActivity(intent);
-                }
-                if (str.equals(Constant.DEMO3)) {
+                } else if (str.equals(Constant.DEMO3)) {
                     Intent intent = new Intent(MainActivity.this, Demo3Activity.class);
                     startActivity(intent);
-                }
-                if (str.equals(Constant.DEMO4)) {
+                } else if (str.equals(Constant.DEMO4)) {
                     Intent intent = new Intent(MainActivity.this, Demo4Activity.class);
                     startActivity(intent);
-                }
-
-                if (str.equals(Constant.DEMO5)) {
+                } else if (str.equals(Constant.DEMO5)) {
                     Intent intent = new Intent(MainActivity.this, Demo5Activity.class);
                     startActivity(intent);
-                }
-
-                if (str.equals(Constant.DEMO6)) {
+                } else if (str.equals(Constant.DEMO6)) {
                     Intent intent = new Intent(MainActivity.this, Demo6Activity.class);
+                    startActivity(intent);
+                } else if (str.equals(Constant.DEMO7)){
+                    Intent intent = new Intent(MainActivity.this, YoukuMenuActivity.class);
                     startActivity(intent);
                 }
             }
         });
-        adapter.setmOnTemLongClickListener(new MyAdapter.OnRecyclerViewItemLongClickListener() {
-            @Override
-            public void onItemLongClick(View view, String str) {
-                if (str.equals(Constant.DEMO1)) {
-                    Intent intent = new Intent(MainActivity.this, Demo1Activity.class);
-                    startActivity(intent);
-                }
-                if (str.equals(Constant.DEMO2)) {
-                    Intent intent = new Intent(MainActivity.this, Demo2Activity.class);
-                    startActivity(intent);
-                }
-                if (str.equals(Constant.DEMO3)) {
-                    Intent intent = new Intent(MainActivity.this, Demo3Activity.class);
-                    startActivity(intent);
-                }
-                if (str.equals(Constant.DEMO4)) {
-                    Intent intent = new Intent(MainActivity.this, Demo4Activity.class);
-                    startActivity(intent);
-                }
-                if (str.equals(Constant.DEMO5)) {
-                    Intent intent = new Intent(MainActivity.this, Demo5Activity.class);
-                    startActivity(intent);
-                }
-                if (str.equals(Constant.DEMO6)){
-                    Intent intent = new Intent(MainActivity.this, Demo6Activity.class);
-                    startActivity(intent);
-                }
-            }
-        });
+
         rv.setAdapter(adapter);
     }
 
@@ -125,6 +94,7 @@ public class MainActivity extends AppCompatActivity {
         mDataList.add(Constant.DEMO4);
         mDataList.add(Constant.DEMO5);
         mDataList.add(Constant.DEMO6);
+        mDataList.add(Constant.DEMO7);
     }
 
 

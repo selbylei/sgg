@@ -24,6 +24,7 @@
         <activity android:name=".Demo5.Demo5Activity" />
         <activity android:name=".Demo6.Demo6Activity" />
         <activity android:name=".Demo6.ContactsActivity" />
+        <activity android:name=".demo_youku_menu.YoukuMenuActivity" />
     </application>
 
 </manifest>

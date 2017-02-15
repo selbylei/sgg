@@ -1,4 +1,4 @@
-package com.hlingsoft.sgg.ButterKnife;
+package com.hlingsoft.sgg.butterknife;
 
 import android.annotation.SuppressLint;
 import android.support.v7.app.ActionBar;

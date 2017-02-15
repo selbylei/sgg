@@ -1,1 +1,1 @@
-include ':app', ':01优酷菜单', ':02.事件分发', ':demo', ':03.contentresolver', ':03.contentprovider'
+include ':app', ':02.事件分发', ':demo', ':03.contentresolver', ':03.contentprovider'
